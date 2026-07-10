@@ -1,19 +1,23 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 const State = () => {
-  const [state, setState ] = useState(0);
+  const [state, setState] = useState(0);
+  useEffect(() => {
+    console.log("State Changing");
+  }, [state]);
 
   const handleIncrement = () => {
     console.log("Increment button clicked");
     setState(state + 1);
   };
 
-  const [Data, setData ] = useState(0);
+  const [Data, setData] = useState(0);
 
-  const handleDecrement=() =>{
+  const handleDecrement = () => {
     console.log("Decrement button clicked");
     setData(Data - 1);
-  }
+  };
 
   return (
     <div>

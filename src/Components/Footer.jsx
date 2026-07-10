@@ -1,65 +1,108 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="w-[100%] h-[200px]  flex justify-around items-center text-1xl">
-        <div>
-          <h1 className="text-2xl font-bold">RANJAN</h1>
-          <p>ranjangowdadidupe@gmail.com</p>
-          <p>9902476568</p>
-          <div className="flex gap-4 mt-3 text-xl text-gray-600">
+    <footer className="bg-gray-100 py-10 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+
+        {/* Left */}
+        <div className="text-center md:text-left">
+          <h1 className="text-2xl font-bold mb-2">RANJAN</h1>
+
+          <p className="text-gray-700 break-all">
+            ranjangowdadidupe@gmail.com
+          </p>
+
+          <p className="text-gray-700 mt-1">
+            9902476568
+          </p>
+
+          <div className="flex justify-center md:justify-start gap-5 mt-5 text-2xl text-gray-600">
+
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-pink-600 transition-colors"
+              className="hover:text-pink-600 duration-300"
             >
               <FaInstagram />
             </a>
+
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ranjan-gowda-72b381294/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-blue-700 transition-colors ml-4"
+              className="hover:text-blue-700 duration-300"
             >
               <FaLinkedin />
             </a>
+
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-blue-600 transition-colors ml-4"
+              className="hover:text-blue-600 duration-300"
             >
               <FaFacebook />
             </a>
+
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-blue-400 transition-colors ml-4"
+              className="hover:text-sky-500 duration-300"
             >
               <FaTwitter />
             </a>
+
           </div>
         </div>
-        <div>
-          <h1 className="text-2xl font-bold">Language</h1>
+
+        {/* Middle */}
+
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-3">
+            Language
+          </h1>
+
           <p>HTML</p>
-          <p>Javascript</p>
-          <p>REACT</p>
+          <p>JavaScript</p>
+          <p>React</p>
         </div>
-        <div>
-          <h1 className="text-2xl font-bold">About</h1>
-          <a href="/">Home</a>
+
+        {/* Right */}
+
+        <div className="text-center md:text-right">
+          <h1 className="text-2xl font-bold mb-3">
+            About
+          </h1>
+
+          <a href="/" className="hover:text-blue-600">
+            Home
+          </a>
+
           <br />
-          <a href="About">About Us</a>
+
+          <a href="About" className="hover:text-blue-600">
+            About Us
+          </a>
+
           <br />
-          <a href="Contact">Contact Us</a>
+
+          <a href="Contact" className="hover:text-blue-600">
+            Contact Us
+          </a>
         </div>
       </div>
-    </div>
+
+      
+    </footer>
   );
 };
 
